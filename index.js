@@ -239,6 +239,7 @@ function firstNamesAllCaps(/* CODE HERE */runners) {
 */
 function getRunnersByTShirtSize(/* CODE HERE */runners,tShirtSize) {
   /* CODE HERE */
+  return runners.filter((item)=>item.shirt_size===tShirtSize);
 }
 
 /**
