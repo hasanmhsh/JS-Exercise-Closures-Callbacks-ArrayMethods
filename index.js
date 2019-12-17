@@ -145,6 +145,12 @@ function processProduct(/* CODE HERE */num1,num2,callback) {
 */
 function processContains(/* CODE HERE */item,list,callback) {
   /* CODE HERE */
+  let contains = false;
+  list.forEach((itm)=>{
+    if(itm === item)
+      contains=true;
+  });
+  return callback(contains);
 }
 
 /**
