@@ -92,6 +92,12 @@ function processLastItem(/* CODE HERE */stringList,callback) {
 */
 function processSum(/* CODE HERE */numberList,callback) {
   /* CODE HERE */
+  let sum = 0;
+  for(let i = 0 ; i < numberList.length ; i++){
+    sum += numberList[i];
+  }
+  return callback(sum);
+  //return callback(numberList.reduce((acc,item)=>acc+item));
 }
 
 /**
