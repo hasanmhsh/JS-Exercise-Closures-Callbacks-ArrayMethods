@@ -204,7 +204,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 */
 function getFullNames(/* CODE HERE */runners) {
   /* CODE HERE */
-  return runners.map((item,idx,arr)=>`${item.first_name}, ${item.last_name}`);
+  return runners.map((item,idx,arr)=>`${item.last_name}, ${item.first_name}`);
 }
 
 /**
@@ -221,6 +221,7 @@ function getFullNames(/* CODE HERE */runners) {
 */
 function firstNamesAllCaps(/* CODE HERE */runners) {
   /* CODE HERE */
+  return runners.map((item,idx,arr)=>`${item.first_name}`.toUpperCase());
 }
 
 /**
