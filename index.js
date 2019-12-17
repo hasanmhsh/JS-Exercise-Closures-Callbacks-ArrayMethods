@@ -120,6 +120,7 @@ function processSum(/* CODE HERE */numberList,callback) {
 */
 function processProduct(/* CODE HERE */num1,num2,callback) {
   /* CODE HERE */
+  return callback(num1*num2)
 }
 
 /**
