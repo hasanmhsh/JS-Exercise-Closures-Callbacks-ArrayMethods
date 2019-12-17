@@ -204,6 +204,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 */
 function getFullNames(/* CODE HERE */runners) {
   /* CODE HERE */
+  return runners.map((item,idx,arr)=>`${item.first_name}, ${item.last_name}`);
 }
 
 /**
