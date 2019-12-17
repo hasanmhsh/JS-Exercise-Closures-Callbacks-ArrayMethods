@@ -92,11 +92,6 @@ function processLastItem(/* CODE HERE */stringList,callback) {
 */
 function processSum(/* CODE HERE */numberList,callback) {
   /* CODE HERE */
-  // let sum = 0;
-  // for(let i = 0 ; i < numberList.length ; i++){
-  //   sum += numberList[i];
-  // }
-  // return callback(sum);
   return callback(numberList.reduce((acc,item)=>acc+item,0));
 }
 
@@ -273,12 +268,14 @@ function tallyUpDonations(/* CODE HERE */runners) {
  * counter() // should return 2
  * etc
 */
+
 function counterMaker() {
   // BROKEN CODE STARTS
   let count = 0;
   function counter() {
-    ++count;
+    return count++;
   }
+  return counter;
   // BROKEN CODE ENDS
 }
 
@@ -302,8 +299,14 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
+function counterMakerWithLimit(/* CODE HERE */max_value) {
   /* CODE HERE */
+  let count = 0;
+  function counter() {
+    max_value+1===count?count=0:count=count;
+    return count++;
+  }
+  return counter;
 }
 
 /////////////// END OF CHALLENGE ///////////////
