@@ -174,6 +174,14 @@ function processContains(/* CODE HERE */item,list,callback) {
 */
 function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */list,callback) {
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+  return callback(list.filter((item,i)=>{
+    let duplicationExists = false;
+    list.forEach((item2,i2)=>{
+      if(item===item2 && i2>i)
+        duplicationExists=true;
+    });
+    return !duplicationExists;
+  }));
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
